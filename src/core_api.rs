@@ -74,7 +74,7 @@ impl CoreApi {
   }
 }
 
-trait WalletApi {
+pub trait WalletApi {
   fn create_wallet_group(
     &self,
     metadata: &WalletGroupMetadataParam,
@@ -84,7 +84,7 @@ trait WalletApi {
   fn recover_wallet(&self, recovery_param: &RecoveryParam) -> impl Future<Output = Result<ApiResponse<Wallet>, Error>>;
 }
 
-trait SigningApi {
+pub trait SigningApi {
   fn evm_transaction_signing(
     &self,
     trans_sign_param: &TransSigningParam<EVMPayload>,
