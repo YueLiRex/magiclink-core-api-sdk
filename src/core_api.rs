@@ -1,13 +1,8 @@
 use crate::{
   domain::{
-    MessageSigning,
-    Signing,
-    SolanaSignMessage,
-    Wallet,
-    WalletGroup,
+    ApiResponse, MessageSigning, Signing, SolanaSignMessage, Wallet, WalletGroup
   },
   dto::{
-    ApiResponse,
     BitcoinPayload,
     EVMPayload,
     MessageSigningParam,

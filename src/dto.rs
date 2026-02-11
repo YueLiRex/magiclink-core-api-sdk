@@ -5,11 +5,6 @@ use serde::{
 };
 use std::collections::HashMap;
 
-#[derive(Debug, Deserialize)]
-pub struct ApiResponse<T> {
-  data: T,
-}
-
 #[derive(Debug, Serialize)]
 pub struct WalletGroupMetadataParam {
   metadata: HashMap<String, String>,

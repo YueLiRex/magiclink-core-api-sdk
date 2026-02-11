@@ -59,6 +59,11 @@ pub struct SolanaSignMessage {
   pub signature: String,
 }
 
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ApiResponse<T> {
+  data: T,
+}
+
 pub struct ApiError {
   pub status_code: u8,
   pub code: String,
