@@ -5,7 +5,7 @@ use serde::{
 use std::collections::HashMap;
 use uuid::Uuid;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct WalletGroup {
   pub uuid: Uuid,
   pub time_created: u64,
@@ -13,7 +13,7 @@ pub struct WalletGroup {
   pub metada: HashMap<String, String>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Wallet {
   pub uuid: Uuid,
   pub time_created: u64,
@@ -39,13 +39,13 @@ pub enum Network {
   Evm,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Signing {
   pub signed_transaction: String,
   pub transaction_hash: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct MessageSigning {
   pub messageHash: String,
   pub signature: String,
@@ -54,7 +54,7 @@ pub struct MessageSigning {
   pub v: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct SolanaSignMessage {
   pub signature: String,
 }
