@@ -61,7 +61,7 @@ pub struct SolanaSignMessage {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ApiResponse<T> {
-  data: T,
+  pub data: T,
 }
 
 pub struct ApiError {
