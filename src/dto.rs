@@ -12,67 +12,67 @@ pub struct WalletGroupMetadataParam {
 
 #[derive(Debug, Serialize)]
 pub struct WalletParam {
-  encryption_context: String,
-  network: Network,
-  wallet_group_id: String,
-  metadata: HashMap<String, String>,
+  pub encryption_context: String,
+  pub network: Network,
+  pub wallet_group_id: String,
+  pub metadata: HashMap<String, String>,
 }
 
 #[derive(Debug, Serialize)]
 pub struct RecoveryParam {
-  wallet_id: String,
-  encryption_context: String,
-  recovery_key: String,
+  pub wallet_id: String,
+  pub encryption_context: String,
+  pub recovery_key: String,
 }
 
 #[derive(Debug, Serialize)]
 pub struct TransSigningParam<T> {
-  encryption_context: String,
-  access_key: String,
-  wallet_id: String,
-  payload: T,
+  pub encryption_context: String,
+  pub access_key: String,
+  pub wallet_id: String,
+  pub payload: T,
 }
 
 #[derive(Debug, Serialize)]
 pub struct EVMPayload {
-  _type: u16,
-  chainId: u64,
-  nonce: u16,
-  value: String,
-  gas: u64,
-  maxFeePerGas: u64,
-  maxPriorityFeePerGas: u64,
-  to: String,
+  pub _type: u16,
+  pub chainId: u64,
+  pub nonce: u16,
+  pub value: String,
+  pub gas: u64,
+  pub maxFeePerGas: u64,
+  pub maxPriorityFeePerGas: u64,
+  pub to: String,
 }
 
 pub type SolanaPayload = String;
 
 #[derive(Debug, Serialize)]
 pub struct BitcoinPayload {
-  inputs: Vec<AddressInfo>,
-  outputs: Vec<AddressInfo>,
+  pub inputs: Vec<AddressInfo>,
+  pub outputs: Vec<AddressInfo>,
 }
 
 #[derive(Debug, Serialize)]
 pub struct AddressInfo {
-  address: String,
-  value: u16,
-  txid: Option<String>,
-  tx_num: Option<u16>,
+  pub address: String,
+  pub value: u16,
+  pub txid: Option<String>,
+  pub tx_num: Option<u16>,
 }
 
 #[derive(Debug, Serialize)]
 pub struct MessageSigningParam {
-  raw_data_hash: String,
-  encryption_context: String,
-  access_key: String,
-  wallet_id: String,
+  pub raw_data_hash: String,
+  pub encryption_context: String,
+  pub access_key: String,
+  pub wallet_id: String,
 }
 
 #[derive(Debug, Serialize)]
 pub struct SolanaSignMessageParam {
-  message_base64: String,
-  encryption_context: String,
-  access_key: String,
-  wallet_id: String,
+  pub message_base64: String,
+  pub encryption_context: String,
+  pub access_key: String,
+  pub wallet_id: String,
 }
