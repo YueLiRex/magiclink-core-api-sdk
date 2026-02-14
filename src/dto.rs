@@ -7,7 +7,7 @@ use std::collections::HashMap;
 
 #[derive(Debug, Serialize)]
 pub struct WalletGroupMetadataParam {
-  metadata: HashMap<String, String>,
+  pub metadata: HashMap<String, String>,
 }
 
 #[derive(Debug, Serialize)]
